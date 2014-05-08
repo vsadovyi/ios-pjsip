@@ -182,8 +182,8 @@ echo "#define PJ_CONFIG_IPHONE 1
 
 cd ${PROJECT_DIR}
 
-CFLAGS="-I${PWD}/../OpenSSL/ios/include"
-configure="./configure-iphone --with-ssl=${PWD}/../OpenSSL/ios"
+CFLAGS=""
+configure="./configure-iphone --with-silk=${PWD}/../silk"
 
 echo "Building for armv7..."
 make distclean > /dev/null 2>&1

@@ -1,4 +1,4 @@
-export PJDIR := /tank/proger/dev/sip/pjs/pjsip/pjproject-2.2.1
+export PJDIR := /Users/matias/workspace/ios-pjsip/pjproject-2.2.1
 include $(PJDIR)/version.mak
 export PJ_DIR := $(PJDIR)
 
@@ -158,7 +158,7 @@ PJ_VIDEO_LDFLAGS += $(SDL_LDFLAGS) $(FFMPEG_LDFLAGS) $(V4L2_LDFLAGS)
 export APP_CC := /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//../../../Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
 export APP_CXX := /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//../../../Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
 export APP_CFLAGS := -DPJ_AUTOCONF=1\
-	-I/tank/proger/dev/sip/pjs/pjsip/pjproject-2.2.1/../OpenSSL/ios/include -O2 -m32 -miphoneos-version-min=5.0 -DPJ_SDK_NAME="\"iPhoneSimulator7.1.sdk\"" -arch i386 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//SDKs/iPhoneSimulator7.1.sdk -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/tank/proger/dev/sip/pjs/pjsip/pjproject-2.2.1/../OpenSSL/ios/include\
+	 -O2 -m32 -miphoneos-version-min=5.0 -DPJ_SDK_NAME="\"iPhoneSimulator7.1.sdk\"" -arch i386 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//SDKs/iPhoneSimulator7.1.sdk -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/Users/matias/workspace/ios-pjsip/pjproject-2.2.1/../silk/interface\
 	$(PJ_VIDEO_CFLAGS) \
 	-I$(PJDIR)/pjlib/include\
 	-I$(PJDIR)/pjlib-util/include\
@@ -173,7 +173,7 @@ export APP_LDFLAGS := -L$(PJDIR)/pjlib/lib\
 	-L$(PJDIR)/pjsip/lib\
 	-L$(PJDIR)/third_party/lib\
 	$(PJ_VIDEO_LDFLAGS) \
-	-O2 -m32 -miphoneos-version-min=5.0 -arch i386 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//SDKs/iPhoneSimulator7.1.sdk -framework AudioToolbox -framework Foundation -L/tank/proger/dev/sip/pjs/pjsip/pjproject-2.2.1/../OpenSSL/ios/lib
+	-O2 -m32 -miphoneos-version-min=5.0 -arch i386 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//SDKs/iPhoneSimulator7.1.sdk -framework AudioToolbox -framework Foundation -L/Users/matias/workspace/ios-pjsip/pjproject-2.2.1/../silk
 export APP_LDXXFLAGS := $(APP_LDFLAGS)
 
 export APP_LIB_FILES = \
@@ -252,7 +252,7 @@ export APP_LDLIBS := $(PJSUA_LIB_LDLIB) \
 	$(APP_THIRD_PARTY_LIBS)\
 	$(APP_THIRD_PARTY_EXT)\
 	$(PJLIB_LDLIB) \
-	-lm -lpthread  -framework CoreAudio -framework CoreFoundation -framework AudioToolbox -framework CFNetwork -framework UIKit -framework UIKit -framework AVFoundation -framework CoreGraphics -framework QuartzCore -framework CoreVideo -framework CoreMedia -lcrypto -lssl
+	-lm -lpthread  -framework CoreAudio -framework CoreFoundation -framework AudioToolbox -framework CFNetwork -framework UIKit -framework UIKit -framework AVFoundation -framework CoreGraphics -framework QuartzCore -framework CoreVideo -framework CoreMedia -lSKP_SILK_SDK
 export APP_LDXXLIBS := $(PJSUA2_LIB_LDLIB) \
 	-lstdc++ \
 	$(APP_LDLIBS)
@@ -275,6 +275,6 @@ export PJ_LIBXX_FILES := $(APP_LIBXX_FILES)
 export PJ_INSTALL_DIR := /usr/local
 export PJ_INSTALL_INC_DIR := ${prefix}/include
 export PJ_INSTALL_LIB_DIR := ${exec_prefix}/lib
-export PJ_INSTALL_CFLAGS := -I$(PJ_INSTALL_INC_DIR) -DPJ_AUTOCONF=1	-I/tank/proger/dev/sip/pjs/pjsip/pjproject-2.2.1/../OpenSSL/ios/include -O2 -m32 -miphoneos-version-min=5.0 -DPJ_SDK_NAME="\"iPhoneSimulator7.1.sdk\"" -arch i386 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//SDKs/iPhoneSimulator7.1.sdk -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/tank/proger/dev/sip/pjs/pjsip/pjproject-2.2.1/../OpenSSL/ios/include
+export PJ_INSTALL_CFLAGS := -I$(PJ_INSTALL_INC_DIR) -DPJ_AUTOCONF=1	 -O2 -m32 -miphoneos-version-min=5.0 -DPJ_SDK_NAME="\"iPhoneSimulator7.1.sdk\"" -arch i386 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//SDKs/iPhoneSimulator7.1.sdk -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/Users/matias/workspace/ios-pjsip/pjproject-2.2.1/../silk/interface
 export PJ_INSTALL_CXXFLAGS := $(PJ_INSTALL_CFLAGS)
 export PJ_INSTALL_LDFLAGS := -L$(PJ_INSTALL_LIB_DIR) $(APP_LDLIBS)
