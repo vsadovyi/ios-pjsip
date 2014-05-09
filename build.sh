@@ -183,7 +183,7 @@ echo "#define PJ_CONFIG_IPHONE 1
 cd ${PROJECT_DIR}
 
 CFLAGS=""
-configure="./configure-iphone --with-silk=${PWD}/../silk"
+configure="./configure-iphone --with-silk=${PWD}/../../silk-arm-ios"
 
 echo "Building for armv7..."
 make distclean > /dev/null 2>&1

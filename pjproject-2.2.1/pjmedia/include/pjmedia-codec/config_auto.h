@@ -82,7 +82,7 @@
 
 /* SILK codec */
 #ifndef PJMEDIA_HAS_SILK_CODEC
-#define PJMEDIA_HAS_SILK_CODEC 0
+#define PJMEDIA_HAS_SILK_CODEC 1
 #endif
 
 #endif	/* __PJMEDIA_CODEC_CONFIG_AUTO_H_ */
