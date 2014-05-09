@@ -68,7 +68,7 @@ LICENSE
   s.subspec 'pjmedia' do |pjmedia|
     pjmedia.public_header_files = 'pjproject-2.2.1/pjmedia/include/**'
     pjmedia.preserve_paths      = 'pjproject-2.2.1/pjmedia/include/**/*.h', 'pjproject-2.2.1/pjmedia/lib/*.a'
-    pjmedia.libraries           = 'pjmedia-arm-apple-darwin9', 'pjmedia-audiodev-arm-apple-darwin9', 'pjmedia-codec-arm-apple-darwin9', 'pjmedia-videodev-arm-apple-darwin9', 'pjsdp-arm-apple-darwin9'
+    pjmedia.libraries           = 'pjmedia-arm-apple-darwin9', 'pjmedia-audiodev-arm-apple-darwin9', 'pjmedia-codec-arm-apple-darwin9', 'pjmedia-videodev-arm-apple-darwin9'
     pjmedia.xcconfig            = {
       'HEADER_SEARCH_PATHS'  => '$(PODS_ROOT)/pjsip/pjproject-2.2.1/pjmedia/include',
       'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/pjsip/pjproject-2.2.1/pjmedia/lib'
