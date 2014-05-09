@@ -80,7 +80,7 @@ LICENSE
     third_party.preserve_paths      = 'pjproject-2.2.1/third_party/lib/*.a'
     third_party.libraries           = 'g7221codec-arm-apple-darwin9', 'ilbccodec-arm-apple-darwin9', 'speex-arm-apple-darwin9', 'srtp-arm-apple-darwin9', 'gsmcodec-arm-apple-darwin9', 'resample-arm-apple-darwin9'
     third_party.xcconfig            = {
-      'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/pjsip/pjproject-2.2/third_party/lib'
+      'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/pjsip/pjproject-2.2.1/third_party/lib'
     }
   end
 
