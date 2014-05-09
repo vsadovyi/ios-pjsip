@@ -24,8 +24,6 @@ PJSIP may include third party software in its source code distribution. Third Pa
 LICENSE
    }
 
-  s.dependency 'OpenSSL-Universal', '~> 1.0.1.f'
-
   s.subspec 'pjsip' do |sub|
     s.public_header_files = 'pjproject-2.2.1/pjsip/include/**/*.{h,hpp}'
     sub.preserve_paths      = 'pjproject-2.2.1/pjsip/include/**/*.h', 'pjproject-2.2.1/pjsip/lib/*.a'
