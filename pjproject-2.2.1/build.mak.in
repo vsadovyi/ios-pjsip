@@ -106,6 +106,16 @@ APP_THIRD_PARTY_LIB_FILES += $(PJ_DIR)/third_party/lib/libg7221codec.$(SHLIB_SUF
 endif
 endif
 
+ifeq (@ac_has_opus_codec@,1)
+APP_THIRD_PARTY_LIB_FILES += $(PJ_DIR)/third_party/lib/libopuscodec-$(LIB_SUFFIX)
+ifeq ($(PJ_SHARED_LIBRARIES),)
+APP_THIRD_PARTY_LIBS += -lopuscodec-$(TARGET_NAME)
+else
+APP_THIRD_PARTY_LIBS += -lopuscodec
+APP_THIRD_PARTY_LIB_FILES += $(PJ_DIR)/third_party/lib/libopuscodec.$(SHLIB_SUFFIX).$(PJ_VERSION_MAJOR) $(PJ_DIR)/third_party/lib/libopuscodec.$(SHLIB_SUFFIX)
+endif
+endif
+
 ifneq ($(findstring pa,@ac_pjmedia_snd@),)
 ifeq (@ac_external_pa@,1)
 # External PA

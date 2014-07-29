@@ -100,6 +100,23 @@ pjmedia_codec_register_audio_codecs(pjmedia_endpt *endpt,
 	return status;
 #endif /* PJMEDIA_HAS_G7221_CODEC */
 
+#if PJMEDIA_HAS_OPUS_CODEC
+    status = pjmedia_codec_opus_init(endpt);
+    if (status != PJ_SUCCESS) {
+        return status;
+    }
+
+    status = pjmedia_codec_bpus_init(endpt);
+    if (status != PJ_SUCCESS) {
+        return status;
+    }
+
+    status = pjmedia_codec_bpus120_init(endpt);
+    if (status != PJ_SUCCESS) {
+        return status;
+    }
+#endif /* PJMEDIA_HAS_OPUS_CODEC */
+
 #if PJMEDIA_HAS_L16_CODEC
     /* Register L16 family codecs */
     status = pjmedia_codec_l16_init(endpt, 0);

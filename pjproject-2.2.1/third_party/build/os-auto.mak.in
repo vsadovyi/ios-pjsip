@@ -23,6 +23,10 @@ ifneq (@ac_no_g7221_codec@,1)
 DIRS += g7221
 endif
 
+ifeq (@ac_has_opus_codec@,1)
+DIRS += opus
+endif
+
 ifneq ($(findstring pa,@ac_pjmedia_snd@),)
 ifeq (@ac_external_pa@,1)
 # External PA

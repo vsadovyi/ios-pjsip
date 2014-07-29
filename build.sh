@@ -69,7 +69,7 @@ copy_libs () {
 }
 
 lipo_libs () {
-cp ../../silk-arm-ios/libSKP_SILK_SDK.a third_party/lib/libSKP_SILK_SDK.a
+cp ../silk-arm-ios/libSKP_SILK_SDK.a third_party/lib/libSKP_SILK_SDK.a
 
 xcrun -sdk iphoneos lipo -arch i386   pjlib/lib-iPhoneSimulator/libpj-arm-apple-darwin9.a \
 						 -arch armv7  pjlib/lib-armv7/libpj-arm-apple-darwin9.a \
@@ -168,24 +168,15 @@ xcrun -sdk iphoneos lipo -arch i386   third_party/lib-iPhoneSimulator/libsrtp-ar
 				 	  -create -output third_party/lib/libsrtp-arm-apple-darwin9.a
 }
 
-if [ -d ${PROJECT_DIR} ]; then
-	echo "Cleaning up..."
-	rm -rf ${PROJECT_DIR}
-fi
-if [ ! -f ${ARCHIVE} ]; then
-	echo "Downloading source code..."
-	curl -o ${ARCHIVE} ${SOURCE_URL}
-fi
-tar xvjf ${ARCHIVE}
-
 echo "Creating config.h..."
-echo "#define PJ_CONFIG_IPHONE 1 
+echo "#define PJ_CONFIG_IPHONE 1
+#define PJMEDIA_HAS_OPUS_CODEC 1 
 #include <pj/config_site_sample.h>" > ${PROJECT_DIR}/pjlib/include/pj/config_site.h
 
 cd ${PROJECT_DIR}
 
 CFLAGS=""
-configure="./configure-iphone --with-silk=${PWD}/../silk-arm-ios"
+configure="./configure-iphone --with-silk=${PWD}/../silk-arm-ios --enable-opus-codec"
 
 echo "Building for armv7..."
 make distclean > /dev/null 2>&1

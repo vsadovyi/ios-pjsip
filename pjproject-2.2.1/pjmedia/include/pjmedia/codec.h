@@ -214,7 +214,7 @@ enum pjmedia_rtp_pt
     PJMEDIA_RTP_PT_DVI4_11K = 16,   /**< audio DVI4 11.025KHz mono	    */
     PJMEDIA_RTP_PT_DVI4_22K = 17,   /**< audio DVI4 22.050KHz mono	    */
     PJMEDIA_RTP_PT_G729 = 18,	    /**< audio G729			    */
-
+    PJMEDIA_RTP_PT_OPUS = 20,
     PJMEDIA_RTP_PT_CELB = 25,	    /**< video/comb Cell-B by Sun (RFC2029) */
     PJMEDIA_RTP_PT_JPEG = 26,	    /**< video JPEG			    */
     PJMEDIA_RTP_PT_NV = 28,	    /**< video NV  by nv program by Xerox   */
