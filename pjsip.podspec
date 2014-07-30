@@ -29,8 +29,8 @@ LICENSE
     pjsip.preserve_paths      = 'pjproject-2.2.1/pjsip/include/**/*.h', 'pjproject-2.2.1/pjsip/lib/*.a'
     pjsip.libraries           = 'pjsua-arm-apple-darwin9', 'pjsip-arm-apple-darwin9', 'pjsip-simple-arm-apple-darwin9', 'pjsip-ua-arm-apple-darwin9'
     pjsip.xcconfig            = {
-      'HEADER_SEARCH_PATHS'  => '$(PODS_ROOT)/ios-pjsip/pjproject-2.2.1/pjsip/include',
-      'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/ios-pjsip/pjproject-2.2.1/pjsip/lib'
+      'HEADER_SEARCH_PATHS'  => '$(PODS_ROOT)/pjsip/pjproject-2.2.1/pjsip/include',
+      'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/pjsip/pjproject-2.2.1/pjsip/lib'
     }
   end
 
@@ -39,8 +39,8 @@ LICENSE
     pjlib.preserve_paths      = 'pjproject-2.2.1/pjlib/include/**/*.h', 'pjproject-2.2.1/pjlib/lib/*.a'
     pjlib.libraries           = 'pj-arm-apple-darwin9'
     pjlib.xcconfig            = {
-      'HEADER_SEARCH_PATHS'  => '$(PODS_ROOT)/ios-pjsip/pjproject-2.2.1/pjlib/include',
-      'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/ios-pjsip/pjproject-2.2.1/pjlib/lib'
+      'HEADER_SEARCH_PATHS'  => '$(PODS_ROOT)/pjsip/pjproject-2.2.1/pjlib/include',
+      'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/pjsip/pjproject-2.2.1/pjlib/lib'
     }
     pjlib.frameworks = 'CFNetwork'
   end
@@ -50,8 +50,8 @@ LICENSE
     pjlib_util.preserve_paths      = 'pjproject-2.2.1/pjlib-util/include/**/*.h', 'pjproject-2.2.1/pjlib-util/lib/*.a'
     pjlib_util.libraries           = 'pjlib-util-arm-apple-darwin9'
     pjlib_util.xcconfig            = {
-      'HEADER_SEARCH_PATHS'  => '$(PODS_ROOT)/ios-pjsip/pjproject-2.2.1/pjlib-util/include',
-      'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/ios-pjsip/pjproject-2.2.1/pjlib-util/lib'
+      'HEADER_SEARCH_PATHS'  => '$(PODS_ROOT)/pjsip/pjproject-2.2.1/pjlib-util/include',
+      'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/pjsip/pjproject-2.2.1/pjlib-util/lib'
     }
   end
 
@@ -60,8 +60,8 @@ LICENSE
     pjnath.preserve_paths      = 'pjproject-2.2.1/pjnath/include/**/*.h', 'pjproject-2.2.1/pjnath/lib/*.a'
     pjnath.libraries           = 'pjnath-arm-apple-darwin9'
     pjnath.xcconfig            = {
-      'HEADER_SEARCH_PATHS'  => '$(PODS_ROOT)/ios-pjsip/pjproject-2.2.1/pjnath/include',
-      'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/ios-pjsip/pjproject-2.2.1/pjnath/lib'
+      'HEADER_SEARCH_PATHS'  => '$(PODS_ROOT)/pjsip/pjproject-2.2.1/pjnath/include',
+      'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/pjsip/pjproject-2.2.1/pjnath/lib'
     }
   end
 
@@ -70,8 +70,8 @@ LICENSE
     pjmedia.preserve_paths      = 'pjproject-2.2.1/pjmedia/include/**/*.h', 'pjproject-2.2.1/pjmedia/lib/*.a'
     pjmedia.libraries           = 'pjmedia-arm-apple-darwin9', 'pjmedia-audiodev-arm-apple-darwin9', 'pjmedia-codec-arm-apple-darwin9', 'pjmedia-videodev-arm-apple-darwin9'
     pjmedia.xcconfig            = {
-      'HEADER_SEARCH_PATHS'  => '$(PODS_ROOT)/ios-pjsip/pjproject-2.2.1/pjmedia/include',
-      'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/ios-pjsip/pjproject-2.2.1/pjmedia/lib'
+      'HEADER_SEARCH_PATHS'  => '$(PODS_ROOT)/pjsip/pjproject-2.2.1/pjmedia/include',
+      'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/pjsip/pjproject-2.2.1/pjmedia/lib'
     }
     pjmedia.frameworks = 'AudioToolbox', 'AVFoundation'
   end
@@ -81,7 +81,7 @@ LICENSE
     third_party.vendored_libraries = 'pjproject-2.2.1/third_party/lib/libSKP_SILK_SDK.a'
     third_party.libraries           = 'g7221codec-arm-apple-darwin9', 'ilbccodec-arm-apple-darwin9', 'speex-arm-apple-darwin9', 'srtp-arm-apple-darwin9', 'gsmcodec-arm-apple-darwin9', 'resample-arm-apple-darwin9'
     third_party.xcconfig            = {
-      'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/ios-pjsip/pjproject-2.2.1/third_party/lib'
+      'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/pjsip/pjproject-2.2.1/third_party/lib'
     }
   end
 
