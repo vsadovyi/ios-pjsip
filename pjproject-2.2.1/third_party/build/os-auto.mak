@@ -23,6 +23,10 @@ ifneq (,1)
 DIRS += g7221
 endif
 
+ifeq (1,1)
+DIRS += opus
+endif
+
 ifneq ($(findstring pa,),)
 ifeq (0,1)
 # External PA
