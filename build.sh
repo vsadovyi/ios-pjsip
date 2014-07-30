@@ -70,6 +70,7 @@ copy_libs () {
 
 lipo_libs () {
 cp ../silk-arm-ios/libSKP_SILK_SDK.a third_party/lib/libSKP_SILK_SDK.a
+cp ../opus-ios/libopus.a third_party/lib/libopus.a
 
 xcrun -sdk iphoneos lipo -arch i386   pjlib/lib-iPhoneSimulator/libpj-arm-apple-darwin9.a \
 						 -arch armv7  pjlib/lib-armv7/libpj-arm-apple-darwin9.a \

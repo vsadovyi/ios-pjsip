@@ -117,8 +117,6 @@ endif
 ifeq ($(AC_HAS_OPUS_CODEC),1)
 export CFLAGS += -I$(THIRD_PARTY)/opus/include -DPJMEDIA_HAS_OPUS_CODEC=1
 export CODEC_OBJS += opus.o
-export CODEC_OBJS += bpus.o
-export CODEC_OBJS += bpus120.o
 endif
 
 ifeq ($(AC_NO_OPENCORE_AMRNB),1)
