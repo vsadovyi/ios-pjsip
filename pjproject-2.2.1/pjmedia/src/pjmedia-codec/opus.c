@@ -196,7 +196,7 @@ PJ_DEF(pj_status_t) pjmedia_codec_opus_init(pjmedia_endpt *endpt) {
 	opus_factory.base.factory_data = NULL;
 	opus_factory.endpt = endpt;
 	if(opus_factory.internal_clock_rate == 0){
-	    opus_factory.internal_clock_rate = 16000;
+	    opus_factory.internal_clock_rate = 48000;
 	}
 
 	/* Create pool */
