@@ -101,11 +101,11 @@ enum pjmedia_audio_pt
 
     // To save space, put these additional codecs proper to csipsimple in the free space
     // At the beggining as in CSipSimple we force telephony event on 101 (for buggy sip servers)
-    PJMEDIA_RTP_PT_SILK_NB = 96,			/**< SILK narrowband/8KHz   */
-    PJMEDIA_RTP_PT_SILK_MB = 97,			/**< SILK mediumband/12KHz  */
-    PJMEDIA_RTP_PT_SILK_WB = 98,			/**< SILK wideband/16KHz    */
-    PJMEDIA_RTP_PT_SILK_SWB = 99,			/**< SILK 24KHz		    */
-    PJMEDIA_RTP_PT_CODEC2 = 100,
+    PJMEDIA_RTP_PT_SILK_NB = 97,			/**< SILK narrowband/8KHz   */
+    PJMEDIA_RTP_PT_SILK_MB = 98,			/**< SILK mediumband/12KHz  */
+    PJMEDIA_RTP_PT_SILK_WB = 99,			/**< SILK wideband/16KHz    */
+    PJMEDIA_RTP_PT_SILK_SWB = 100,			/**< SILK 24KHz		    */
+    PJMEDIA_RTP_PT_CODEC2 = 101,
     /* Caution!
      * Ensure the value of the last pt above is <= 127.
      */
