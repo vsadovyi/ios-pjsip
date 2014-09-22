@@ -165,10 +165,10 @@ PJ_VIDEO_LDFLAGS += $(SDL_LDFLAGS) $(FFMPEG_LDFLAGS) $(V4L2_LDFLAGS)
 
 
 # CFLAGS, LDFLAGS, and LIBS to be used by applications
-export APP_CC := /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//../../../Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
-export APP_CXX := /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//../../../Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+export APP_CC := clang
+export APP_CXX := clang
 export APP_CFLAGS := -DPJ_AUTOCONF=1\
-	 -O2 -m32 -miphoneos-version-min=5.0 -DPJ_SDK_NAME="\"iPhoneSimulator7.1.sdk\"" -arch i386 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//SDKs/iPhoneSimulator7.1.sdk -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/Users/matias/workspace/ios-pjsip/pjproject-2.2.1/../silk-arm-ios/interface\
+	-O2 -m32 -mios-simulator-version-min=5.0 -DPJ_SDK_NAME="\"iPhoneSimulator8.0.sdk\"" -arch x86_64 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//SDKs/iPhoneSimulator8.0.sdk -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/Users/matias/workspace/ios-pjsip/pjproject-2.2.1/../silk-arm-ios/interface\
 	$(PJ_VIDEO_CFLAGS) \
 	-I$(PJDIR)/pjlib/include\
 	-I$(PJDIR)/pjlib-util/include\
@@ -183,7 +183,7 @@ export APP_LDFLAGS := -L$(PJDIR)/pjlib/lib\
 	-L$(PJDIR)/pjsip/lib\
 	-L$(PJDIR)/third_party/lib\
 	$(PJ_VIDEO_LDFLAGS) \
-	-O2 -m32 -miphoneos-version-min=5.0 -arch i386 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//SDKs/iPhoneSimulator7.1.sdk -framework AudioToolbox -framework Foundation -L/Users/matias/workspace/ios-pjsip/pjproject-2.2.1/../silk-arm-ios
+	-O2 -m32 -mios-simulator-version-min=5.0 -arch x86_64 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//SDKs/iPhoneSimulator8.0.sdk -framework AudioToolbox -framework Foundation -L/Users/matias/workspace/ios-pjsip/pjproject-2.2.1/../silk-arm-ios
 export APP_LDXXFLAGS := $(APP_LDFLAGS)
 
 export APP_LIB_FILES = \
@@ -285,6 +285,6 @@ export PJ_LIBXX_FILES := $(APP_LIBXX_FILES)
 export PJ_INSTALL_DIR := /usr/local
 export PJ_INSTALL_INC_DIR := ${prefix}/include
 export PJ_INSTALL_LIB_DIR := ${exec_prefix}/lib
-export PJ_INSTALL_CFLAGS := -I$(PJ_INSTALL_INC_DIR) -DPJ_AUTOCONF=1	 -O2 -m32 -miphoneos-version-min=5.0 -DPJ_SDK_NAME="\"iPhoneSimulator7.1.sdk\"" -arch i386 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//SDKs/iPhoneSimulator7.1.sdk -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/Users/matias/workspace/ios-pjsip/pjproject-2.2.1/../silk-arm-ios/interface
+export PJ_INSTALL_CFLAGS := -I$(PJ_INSTALL_INC_DIR) -DPJ_AUTOCONF=1	-O2 -m32 -mios-simulator-version-min=5.0 -DPJ_SDK_NAME="\"iPhoneSimulator8.0.sdk\"" -arch x86_64 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//SDKs/iPhoneSimulator8.0.sdk -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/Users/matias/workspace/ios-pjsip/pjproject-2.2.1/../silk-arm-ios/interface
 export PJ_INSTALL_CXXFLAGS := $(PJ_INSTALL_CFLAGS)
 export PJ_INSTALL_LDFLAGS := -L$(PJ_INSTALL_LIB_DIR) $(APP_LDLIBS)
