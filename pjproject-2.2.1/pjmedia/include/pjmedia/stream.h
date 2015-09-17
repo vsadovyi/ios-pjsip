@@ -184,10 +184,9 @@ pjmedia_stream_info_from_sdp(pjmedia_stream_info *si, pj_pool_t *pool,
  * @return		PJ_SUCCESS on success.
  */
 PJ_DECL(pj_status_t)
-    pjmedia_stream_create(pjmedia_endpt *endpt, pj_pool_t *pool,
-                          const pjmedia_stream_info *info,
-                          pjmedia_transport *tp, void *user_data,
-                          pjmedia_stream **p_stream);
+pjmedia_stream_create(pjmedia_endpt *endpt, pj_pool_t *pool,
+                      const pjmedia_stream_info *info, pjmedia_transport *tp,
+                      void *user_data, pjmedia_stream **p_stream);
 
 /**
  * Destroy the media stream.
@@ -219,7 +218,7 @@ PJ_DEF(char) pjmedia_stream_get_last_jb_frame_type(pjmedia_stream *stream);
  * @return		PJ_SUCCESS on success.
  */
 PJ_DECL(pj_status_t)
-    pjmedia_stream_get_port(pjmedia_stream *stream, pjmedia_port **p_port);
+pjmedia_stream_get_port(pjmedia_stream *stream, pjmedia_port **p_port);
 
 /**
  * Get the media transport object associated with this stream.
@@ -233,9 +232,9 @@ PJ_DECL(pjmedia_transport *) pjmedia_stream_get_transport(pjmedia_stream *st);
 /* Vlad changes
  * Modify codec param
  */
-PJ_DEF(pj_status_t)
-    pjmedia_stream_codec_modify(pjmedia_stream *st,
-                                const pjmedia_codec_param *param);
+PJ_DECL(pj_status_t)
+pjmedia_stream_codec_modify(pjmedia_stream *st,
+                            const pjmedia_codec_param *param);
 
 /**
  * Start the media stream. This will start the appropriate channels
@@ -314,7 +313,7 @@ PJ_DECL(pj_status_t) pjmedia_stream_get_stat_jbuf(const pjmedia_stream *stream,
  * @return		PJ_SUCCESS on success.
  */
 PJ_DECL(pj_status_t)
-    pjmedia_stream_pause(pjmedia_stream *stream, pjmedia_dir dir);
+pjmedia_stream_pause(pjmedia_stream *stream, pjmedia_dir dir);
 
 /**
  * Resume the individual channel in the stream.
@@ -325,7 +324,7 @@ PJ_DECL(pj_status_t)
  * @return		PJ_SUCCESS on success;
  */
 PJ_DECL(pj_status_t)
-    pjmedia_stream_resume(pjmedia_stream *stream, pjmedia_dir dir);
+pjmedia_stream_resume(pjmedia_stream *stream, pjmedia_dir dir);
 
 /**
  * Transmit DTMF to this stream. The DTMF will be transmitted uisng
@@ -373,8 +372,8 @@ PJ_DECL(pj_bool_t) pjmedia_stream_check_dtmf(pjmedia_stream *stream);
  *			digits in the .
  */
 PJ_DECL(pj_status_t)
-    pjmedia_stream_get_dtmf(pjmedia_stream *stream, char *ascii_digits,
-                            unsigned *size);
+pjmedia_stream_get_dtmf(pjmedia_stream *stream, char *ascii_digits,
+                        unsigned *size);
 
 /**
  * Set callback to be called upon receiving DTMF digits. If callback is
