@@ -1,8 +1,8 @@
-export CC = clang -c
-export CXX = clang -c
+export CC = /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//../../../Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c
+export CXX = /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//../../../Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c
 export AR = /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//../../../Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -o
 export AR_FLAGS =  
-export LD = clang
+export LD = /Applications/XCode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer//../../../Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
 export LDOUT = -o 
 export RANLIB = echo ranlib
 
