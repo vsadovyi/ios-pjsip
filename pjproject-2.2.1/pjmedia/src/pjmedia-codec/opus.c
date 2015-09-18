@@ -605,11 +605,11 @@ static pj_status_t opus_codec_close(pjmedia_codec *codec) {
 static pj_status_t opus_codec_modify(pjmedia_codec *codec,
                                      const pjmedia_codec_param *attr) {
   PJ_ASSERT_RETURN(codec && attr, PJ_EINVAL);
-  opus_private *opus;
+  struct opus_private *opus;
   unsigned i;
   const pj_str_t STR_FMTP_MAX_AVERAGE_BITRATE = {"maxaveragebitrate", 17};
 
-  opus = (opus_private *)codec->codec_data;
+  opus = (struct opus_private *)codec->codec_data;
   PJ_ASSERT_RETURN(opus, PJ_EINVAL);
 
   /* Apply fmtp params to Encoder */
