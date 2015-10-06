@@ -8,6 +8,8 @@ This is a prebuild pjsip library included universal libraries for armv7, armv7s,
 
 This *fork supports SSL*.
 
+This fork binaries built using iOS7.0 SDK
+
 How to install?
 ---------------
 
@@ -15,7 +17,7 @@ The best way is using cocoapods.
 
 Check the `Podfile` configuration:
 ```
-platform :ios, '5.1.1'
+platform :ios, '7.0'
 
 pod 'pjsip', :path => '~/path/to/this/checkout'
 ```
